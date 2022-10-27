@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>persional internent</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      * {
+        border: 1px solid black;
+      }
+      .yinying {
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+      }
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: #eee;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        font-size: 14px;
+        color: #666;
+      }
+      @media (max-width: 600px) {
+        .cenbian {
+          display: none;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .shujuqu {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shuju {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+        .neirong::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--cebianlian-->
+    <div style="width: 200px; z-index: 2" class="cenbian baise yinying">
+      <!--touxianglan-->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img
+          src="https://pic1.imgdb.cn/item/63562afc16f2c2beb17ce482.jpg"
+          width="40px"
+          height="40px"
+          alt="李哲宇"
+        />
+        <div style="margin-left: 10px">无聊皇上</div>
+      </div>
+      <!--daohanglan-->
+      <div class="flex1">
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+      </div>
+    </div>
+    <!--zhuquyu-->
+    <div class="flex1 flex column">
+      <!--toubulan-->
+      <div
+        style="height: 60px; z-index: 1; text-align: center; font-size: 30px"
+        class="baise yinying"
+      >
+        <b> Welcome to Glorious Evolution</b>
+        <p style="font-size: 15px; margin: 0px; text-align: right">
+          (Development version)
+        </p>
+      </div>
+      <!--neironglan-->
+      <div style="overflow: auto" class="neirong flex1 flex">
+        <!--zuoqu-->
+        <div style="flex: 3" class="flex column mg8">
+          <!--shujuqu-->
+          <div class="flex shujuqu">
+            <!--shuju-->
+            <div style="height: 100px" class="flex1 shuju baise yinying mgr8">
+              <audio controls>
+                <source src="反方向的钟.mp3" type="audio/mpeg" />
+                <embed height="50" width="100" src="反方向的钟.mp3" />
+              </audio>
+              <button id="dzs" onclick="dianzan()">0</button>
+              <script>
+                function dianzan() {
+                  let dianzanbiaoqian = window.document.getElementById("dzs");
+                  let dianzanshu = parseInt(dianzanbiaoqian.innerText);
+                  let xinshuzi = dianzanshu + 1;
+                  dianzanbiaoqian.innerText = xinshuzi;
+                  window.localStorage.setItem("chun", xinshuzi);
+                }
+                let data = window.localStorage.getItem("chun");
+              </script>
+              <p style="margin: -0.2px; text-indent: 2em">
+                听了一千遍《反方向的钟》，却没回到你爱我的那个时候​
+              </p>
+            </div>
+
+            <div
+              style="height: 100px"
+              class="flex1 shuju baise yinying mgr8"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 shuju baise yinying mgr8"
+            ></div>
+            <div style="height: 100px" class="flex1 shuju baise yinying"></div>
+          </div>
+          <!--liebiaoqu-->
+          <div class="flex column">
+            <!--liebiaoxiang-->
+            <div
+              style="height: 160px; font-size: 10px; margin: 0px"
+              class="baise mgt8 yinying"
+            >
+              <p
+                style="
+                  font-size: 15px;
+                  display: flex;
+                  align-items: flex-start;
+                  padding: 0px;
+                  border: 0px;
+                "
+              >
+                歌词:
+              </p>
+              ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏ（b p m f d t n l g k m）
+              ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐ（b p m f d t n l g k m j）
+              ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏ（b p m f d t n l g k m）
+              ㄅㄆㄇㄈㄉㄊㄋㄌ（b p m f d t n l） 迷迷蒙蒙 你给的梦 出现裂缝
+              隐隐作痛 怎么沟通你都没空 说我不懂 说了没用 他的笑容 有何不同
+              在你心中 我不再受宠 我的天空 是雨是风 还是彩虹 你在操纵
+              恨自己真的没用情绪激动 一颗心到现在还在抽痛
+              还为分手前那句抱歉在感动 穿梭时间的画面的钟 从反方向 开始移动
+              回到当初爱你的时空 停格内容 不忠 所有回忆对着我进攻 我的伤口
+              被你拆封 誓言太沉重泪被纵容 脸上汹涌 失控 城市霓虹 不安跳动
+              染红夜空 过去种种 像一场梦 不敢去碰 一想就痛 心碎内容 每一秒钟
+              都有不同 你不懂 连一句珍重 也有苦衷 也不想送 寒风中 废墟烟囱
+              停止转动 一切落空 在人海中盲目跟从 别人的梦 全面放纵 恨没有用
+              疗伤止痛 不再感动 没有梦 痛不知轻重 泪水鲜红 全面放纵
+              恨自己真的没用情绪激动 一颗心到现在还在抽痛
+              还为分手前那句抱歉在感动 穿梭时间的画面的钟 从反方向 开始移动
+              回到当初爱你的时空 停格内容 不忠 所有回忆对着我进攻 我的伤口
+              被你拆封 誓言太沉重泪被纵容 脸上汹涌 失控 穿梭时间的画面的钟
+              从反方向 开始移动 回到当初爱你的时空 停格内容 不忠
+              所有回忆对着我进攻
+            </div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+          </div>
+        </div>
+        <!--youqu-->
+        <div style="flex: 1" class="youqu flex column mgr8 mgt8">
+          <!--tishiqu-->
+          <div style="height: 150px" class="baise yinying"></div>
+          <!--xiaoxiqu-->
+          <div style="height: 300px" class="baise mgt8 yinying"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
